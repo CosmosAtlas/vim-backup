@@ -37,7 +37,7 @@ syntax on
 " Set encoding
 set encoding=utf-8
 " Apply colorscheme
-colorscheme Tomorrow-Night-Bright
+" colorscheme Tomorrow-Night-Bright
 set background=dark
 " Set filetype options
 filetype indent plugin on
@@ -79,7 +79,4 @@ nmap <C-l> :TagbarToggle<CR>
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline_left_sep = ''
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_sep = ''
+let g:airline_powerline_fonts=1
