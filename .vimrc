@@ -1,7 +1,17 @@
+
+"+-------------------------------------------------------+
+"| / ___|___  ___ _ __ ___   ___  ___  |__  / |__  _   _ |
+"|| |   / _ \/ __| '_ ` _ \ / _ \/ __|   / /| '_ \| | | ||
+"|| |__| (_) \__ \ | | | | | (_) \__ \  / /_| | | | |_| ||
+"| \____\___/|___/_| |_| |_|\___/|___/ /____|_| |_|\__,_||
+"+-------------------------------------------------------+
+
+
 " ==== Install plugs with vim-plug ====
 call plug#begin('~/.vim/plugged')
 
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'vim-scripts/DrawIt'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'junegunn/vim-easy-align'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
@@ -24,6 +34,8 @@ Plug 'severin-lemaignan/vim-minimap'
 Plug 'majutsushi/tagbar'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-unimpaired'
+Plug 'chrisbra/csv.vim'
+Plug 'fadein/FIGlet.vim'
 
 call plug#end()
 
@@ -38,13 +50,24 @@ syntax on
 set encoding=utf-8
 " Apply colorscheme
 " colorscheme Tomorrow-Night-Bright
+colorscheme Solarized
+" colorscheme default
 set background=dark
 " Set filetype options
 filetype indent plugin on
-" Set mouse integration
+" Set to save to file automatically
+set noswapfile
+" Disable bells
+set visualbell
+" List end of line files and tabs files
+set listchars=tab:▸\ ,eol:¬
+set list
+" Set the mouse 
 set mouse=a
-
-
+" Set the font of GUI
+if has('gui_macvim')
+	set guifont=Terminus\ (TTF):h18 
+endif
 
 " ==== Toggle NERDTree ====
 map <C-n> :NERDTreeToggle<CR>
@@ -70,7 +93,7 @@ autocmd VimEnter * :IndentGuidesToggle
 " EasyMotion
 map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
-set nohlsearch!
+set nohlsearch
 
 " Toogle Tagbar
 nmap <C-l> :TagbarToggle<CR>
