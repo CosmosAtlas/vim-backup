@@ -3,8 +3,8 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'bling/vim-airline'
+Plug 'dracula/vim'
 Plug 'Valloric/YouCompleteMe'
-Plug 'junegunn/seoul256.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Raimondi/delimitMate'
@@ -33,7 +33,8 @@ set expandtab
 set encoding=utf8
 
 set background=dark
-colo seoul256
+color dracula
+hi Normal guibg=NONE ctermbg=NONE
 
 set list
 
