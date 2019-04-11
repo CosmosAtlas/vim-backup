@@ -8,11 +8,11 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdcommenter'
 Plug 'Raimondi/delimitMate'
+Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'ryanoasis/vim-devicons'
 Plug 'lervag/vimtex'
 
 call plug#end()
@@ -33,7 +33,8 @@ set expandtab
 set encoding=utf8
 
 set background=dark
-color dracula
+let g:gruvbox_guisp_fallback = "bg"
+color gruvbox
 hi Normal guibg=NONE ctermbg=NONE
 
 set list
