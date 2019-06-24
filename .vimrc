@@ -1,8 +1,7 @@
-
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'bling/vim-airline'
+Plug 'vimwiki/vimwiki'
 Plug 'dracula/vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'easymotion/vim-easymotion'
@@ -14,6 +13,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'lervag/vimtex'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
@@ -30,12 +30,17 @@ filetype indent plugin on
 set ts=4 sw=4
 set expandtab
 
+set nocompatible
+
 set encoding=utf8
 
 set background=dark
-let g:gruvbox_guisp_fallback = "bg"
 color gruvbox
-hi Normal guibg=NONE ctermbg=NONE
+let g:gruvbox_guisp_fallback = 'bg'
+
+" Set highlight method for spellchecks
+hi clear SpellBad
+hi SpellBad cterm=underline
 
 set list
 
@@ -85,3 +90,5 @@ let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 
 let g:vimtex_latexmk_options = "-pdf -verbose -file-line-error -synctex=1"
 let g:vimtex_latexmk_callback = 0
+
+let g:polyglot_disabled = ['latex']
