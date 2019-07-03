@@ -17,10 +17,7 @@ Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
-
-
 " Overall settings
-
 set nu
 set smartindent
 set mouse=a
@@ -43,15 +40,7 @@ hi clear SpellBad
 hi SpellBad cterm=underline
 
 set list
-
 set listchars=tab:▸\ ,eol:¬
-
-
-" ==== Map window switching ====
-nmap <silent> <C-Up> :wincmd k<CR>
-nmap <silent> <C-Down> :wincmd j<CR>
-nmap <silent> <C-Left> :wincmd h<CR>
-nmap <silent> <C-Right> :wincmd l<CR>
 
 let g:indent_guides_auto_color = 1
 hi IndentGuidesOdd  ctermbg=black
@@ -70,22 +59,14 @@ set laststatus=2
 " Airline 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16_default'
-let g:airline_powerline_fonts = 1
 
 
 map <C-t> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
+" Control-P fuzzy finder
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-
-
-
-let g:webdevicons_enable = 1
-let g:webdevicons_enable_unite = 1
-let g:webdevicons_enable_airline_tabline = 1
-let g:webdevicons_enable_airline_statusline = 1
-let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
 
 
 let g:vimtex_latexmk_options = "-pdf -verbose -file-line-error -synctex=1"
